@@ -1,0 +1,28 @@
+create table profiles(username varchar(50) not NUll,id Bigint primary key not null,gold int default 500,exp int default 0, lvl int default 1,selection Bigint)
+
+create table inventory(index serial primary key, card_name varchar(50) Not null,player bigint,lvl int,exp int, atk int,hp int,def int, speed int,spdef int,spatk int,love int,critical int,evasion int, ability varchar(100),ability_desc varchar(256),image_url varchar(150))
+
+create table Dex(index serial Primary Key,card_name varchar(100),series int,arc int,floor int ,lvl int default 1, atk int,hp int,def int, speed int,spdef int,spatk int,love int,critical int,evasion int, ability varchar(100),ability_desc varchar(256),image_url varchar(150))
+insert into dex(card_name,series,atk,hp,def, speed,spdef ,spatk ,love ,critical ,evasion , ability ,ability_desc,image_url) values('Luffy',1,30 ,30,30, 30,15,15,1,1,1,'Reflection','It absorbs and help in reflecting the enemy atk. increasing card defence by 25% and decreases speed by 10%','https://cdn.discordapp.com/attachments/811481352050311178/828937111058776064/a20e90107b7f8ad4001fd7808e53f51d.png')
+
+
+
+
+
+
+
+
+
+create table series(index serial primary key,series_name varchar(100));
+insert into series(series_name) values('One Piece');
+insert into series(series_name) values('Naruto');
+insert into series(series_name) values('Fate');
+insert into series(series_name) values('Fairy Tail');
+insert into series(series_name) values('Bleach');
+insert into series(series_name) values('Kanojo okarishimasu');
+
+
+
+
+create table story(player bigint,series int, arc int,floor int)
+
